@@ -97,14 +97,15 @@
 								<li class="header-nav-list-item">
 									<a
 										href="/"
+                                        onclick="selectPage(0)"
 										aria-current="page"
-										class="header-nav-link w-nav-link w--current"
+										class="header-nav-link w-nav-link home-btn w--current"
 										>Home</a
 									>
 								</li>
 								<li class="header-nav-list-item">
-									<a href="/components" class="header-nav-link w-nav-link"
-										>Components</a
+									<a href="/components" class="header-nav-link ctasks-btn w-nav-link"
+										>C Tasks</a
 									>
 								</li>
 								<li class="header-nav-list-item">
@@ -131,13 +132,14 @@
 													<div class="grid-1-column gap-row-12px">
 														<a
 															href="/"
+                                                            onclick="selectPage(0)"
 															aria-current="page"
-															class="dropdown-link-single w-dropdown-link w--current"
+															class="dropdown-link-single w-dropdown-link home-btn w--current"
 															>Home</a
 														><a
 															href="/changelog"
-															class="dropdown-link-single w-dropdown-link"
-															>Changelog</a
+															class="dropdown-link-single w-dropdown-link ctasks-btn"
+															>C Tasks</a
 														><a
 															href="/licenses"
 															class="dropdown-link-single w-dropdown-link"
@@ -228,22 +230,23 @@
 										<a
 											href="/"
 											aria-current="page"
-											class="sidebar-link w-inline-block w--current"
+											class="sidebar-link w-inline-block home-btn w--current"
+                                            onclick="selectPage(0)"
 											><img
 												src="./resources/icons/home-icon.png"
 												loading="eager"
 												alt="Home"
 												class="max-w-20px"
 											/>
-											<div class="text-100 medium">Home</div></a
-										><a href="/changelog" class="sidebar-link w-inline-block"
+											<div class="text-100 medium" >Home</div></a
+										><a href="/changelog" class="sidebar-link w-inline-block ctasks-btn"
 											><img
 												src="./resources/icons/write-icon.png"
 												loading="eager"
 												alt="Write"
 												class="max-w-20px"
 											/>
-											<div class="text-100 medium">Changelog</div></a
+											<div class="text-100 medium">C Tasks</div></a
 										>
 									</div>
 									<div class="text-50 medium sidebar-title">C tasks</div>
@@ -295,7 +298,8 @@
 									<a
 										href="/"
 										aria-current="page"
-										class="sidebar-link w-inline-block w--current"
+										class="sidebar-link w-inline-block home-btn w--current"
+                                        onclick="selectPage(0)"
 										><img
 											src="./resources/icons/home-icon.png"
 											loading="eager"
@@ -303,14 +307,14 @@
 											class="max-w-20px"
 										/>
 										<div class="text-100 medium">Home</div></a
-									><a href="/changelog" class="sidebar-link w-inline-block"
+									><a href="/changelog" class="sidebar-link w-inline-block ctasks-btn"
 										><img
 											src="./resources/icons/write-icon.png"
 											loading="eager"
 											alt="Write"
 											class="max-w-20px"
 										/>
-										<div class="text-100 medium">Changelog</div></a
+										<div class="text-100 medium">C Tasks</div></a
 									>
 								</div>
 								<div class="text-50 medium sidebar-title">C tasks</div>

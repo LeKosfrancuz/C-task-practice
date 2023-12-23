@@ -2302,6 +2302,11 @@ textarea.w-select {
 	color: var(--neutral--100);
 }
 
+
+.mg-left-24px {
+	margin-left: 24px;
+}
+
 .mg-bottom-8px {
 	margin-bottom: 8px;
 }
