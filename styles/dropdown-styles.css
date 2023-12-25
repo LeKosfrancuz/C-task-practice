@@ -53,11 +53,26 @@
 	color: var(--neutral--800);
 }
 
+.dropdown-similars {
+	vertical-align: top;
+	color: #222;
+	white-space: warp;
+	margin-left: 0px;
+	margin-right: auto;
+	padding: 15px;
+	position: relative;
+	width: 100%;
+	border-bottom: var(--accent--primary-1) solid 1px;
+}
+.dropdown-similars:last-child {
+	border: none;
+}
+
 
 .w-dropdown {
 	text-align: left;
 	z-index: 900;
-	display: inline-block;
+	/* display: inline-block; */
 	position: relative;
 }
 
