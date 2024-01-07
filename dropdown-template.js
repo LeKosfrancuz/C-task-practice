@@ -123,8 +123,12 @@ function addTask(task, taskID) {
 	if (task._TestInputs !== null && task._TestOutputs !== null) {
 		console.log(task._TestOutputs);
 		taskHTML += `
-									<div>INPUT:  <blockquote>${task._TestInputs[0]}</blockquote>  </div>
-									<div>OUTPUT: <blockquote>${task._TestOutputs[0]}</blockquote>  </div>
+								<div class="input mg-bottom-16px">
+									<strong>INPUT :</strong>
+										<blockquote>${task._TestInputs[0]}</blockquote>
+									<strong>OUTPUT :</strong>
+										<blockquote>${task._TestOutputs[0]}</blockquote>
+								</div>
 		
 		`
 	}
@@ -138,7 +142,7 @@ function addTask(task, taskID) {
                                             href="#"
                                             class="w-dropdown"
                                             >
-                                                <a class="btn-primary w-inline-block w-dropdown-toggle"> 
+                                                <a class="btn-primary w-inline-block w-dropdown-toggle pad-similar-btn"> 
                                                     <div class="flex-horizontal gap-column-4px">
                                                         <div style="color:white" >Find similar</div>
                                                         <img
@@ -188,6 +192,11 @@ function displayHome() {
     Webflow.require("ix2").init(rawData);
 }
 
+function displayCTasks() {
+    $("div.tasks-container").html("<h1>C Tasks</h1> Ova stranica nije završena!");
+    Webflow.require("ix2").init(rawData);
+}
+
 function display404() {
 	$.ajax( {url: "index.html", context: document.body}).done( function () {
     $("div.tasks-container").html(`
@@ -221,23 +230,35 @@ function display404() {
 }
 
 function displayCategory(categoryID, subCategoryID) {
-	$("div.tasks-container").html("");
-	let tasks = izbornik[categoryID]._SubCategories[subCategoryID]._TaskList;
+	// TODO: Spojiti linkove s njihovim odgovarajućim stranicama
+	$("div.tasks-container").html(`
+		<div class="breadcrumb-wrapper mg-bottom-24px">
+			<div class="flex align-center">
+				<a data-w-id="520db6ac-b746-24e0-5769-1b51fae2710b" href="#c-tasks" class="breadcrumb-link-wrapper w-inline-block">
+					<div class="text-600">C Tasks</div>
+					<div class="breadcrumb-underline" style="background-color: rgb(31, 45, 84);"></div>
+				</a>
+				<img src="./resources/icons/breadcrumb-divider-icon.svg" loading="eager" alt=">" class="breadcrumb-divider">
+			</div>
+			
+			<div class="flex align-center">
+				<a data-w-id="520db6ac-b746-24e0-5769-1b51fae2710b" href="#notconnected" class="breadcrumb-link-wrapper w-inline-block">
+					<div class="text-600">${g_izbornik[categoryID]._CategoryName}</div>
+					<div class="breadcrumb-underline" style="background-color: rgb(31, 45, 84);"></div>
+				</a>
+				<img src="./resources/icons/breadcrumb-divider-icon.svg" loading="eager" alt=">" class="breadcrumb-divider">
+			</div>
+			
+			<div class="text-600 breadcrumb-current">${g_izbornik[categoryID]._SubCategories[subCategoryID]._name}</div>
+		</div>
+	`);
+	let tasks = g_izbornik[categoryID]._SubCategories[subCategoryID]._TaskList;
 
 	for (let i = 0; i < tasks.length; i++) {
 		addTask(tasks[i], i);
 	}
 }
 
-function selectPage(pageID) {
-    // TODO: Istražiti može li se updateat HTML sa animacijama bez reloada stranice
-    if (pageID === 0) {
-        localStorage.setItem("g_page", homeID);
-	} if (pageID === 404 || pageID === error404ID) {
-		localStorage.setItem("g_page", error404ID);
-	}
-    location.reload();
-}
 
 function selectCategory(categoryID, subCategoryID) {
     // TODO: Istražiti može li se updateat HTML sa animacijama bez reloada stranice

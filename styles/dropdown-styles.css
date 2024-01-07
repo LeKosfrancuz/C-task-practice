@@ -9,10 +9,10 @@
 	flex-flow: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 14px 40px 14px 14px;
 	transition: border-color 0.3s, color 0.3s;
 	display: flex;
 	position: relative;
+	padding: 20px;
 }
 
 .dropdown-toggle:hover {
@@ -84,7 +84,6 @@
 	white-space: nowrap;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 20px;
 	text-decoration: none;
 	position: relative;
 }
@@ -193,4 +192,14 @@
 
 .w--nav-dropdown-list-open {
 	position: static;
+}
+
+
+.pad-similar-btn {
+	padding: 20px;
+}
+
+.flex-vertical {
+	display: flex;
+	gap: 6px;
 }

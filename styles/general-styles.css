@@ -179,4 +179,39 @@ figure {
 figcaption {
 	text-align: center;
 	margin-top: 16px;
+
+}
+
+
+
+.mg-left-24px {
+	margin-left: 24px;
+}
+
+.mg-bottom-8px {
+	margin-bottom: 8px;
+}
+
+.mg-bottom-16px {
+	margin-bottom: 16px;
+}
+
+.mg-bottom-24px {
+	margin-bottom: 24px;
+}
+
+.mg-bottom-32px {
+	margin-bottom: 32px;
+}
+
+.mg-bottom-40px {
+	margin-bottom: 40px;
+}
+
+.mg-bottom-48px {
+	margin-bottom: 48px;
+}
+
+.mg-top-48px {
+	margin-top: 48px;
 }

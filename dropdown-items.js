@@ -48,7 +48,11 @@ const SeqGeometryTasks = [
 	// Ulaz:  Upišite koordinate točke A(x1 i y1): 1 2
 	//		  Upišite koordinate točke A(x1 i y1): 3 5
 	// Izlaz: Dvije točake su udaljene 3.61
-	new Task("U programu omogućite unos koordinata točaka A(x1,y1) i B(x2,y2). Izračunati i ispisati njihovu udaljenost u koordinantnom sustavu!")
+	new Task("U programu omogućite unos koordinata točaka A(x1,y1) i B(x2,y2). Izračunati i ispisati njihovu udaljenost u koordinantnom sustavu!",
+			 "Upišite koordinate točke A(x1 i y1): 1 2 <br> Upišite koordinate točke A(x1 i y1): 3 5",
+			 "Dvije točake su udaljene 3.61"
+	),
+	new Task("Default Task")
 ];
 
 var izbornik = [

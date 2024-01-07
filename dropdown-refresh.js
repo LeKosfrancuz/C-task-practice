@@ -18,6 +18,8 @@ if (useHash) {
 
 	if (window.location.hash === `#${homeID}` || window.location.hash === "") {
 		localStorage.setItem("g_page", homeID);
+	} else if (window.location.hash === "#" + c_tasksID) {
+		localStorage.setItem("g_page", c_tasksID);
 	} else if (window.location.hash.startsWith(`#${c_tasksID}`)) {
 		localStorage.setItem("g_page", c_tasksID);
 
@@ -53,6 +55,10 @@ if (localStorage.getItem("g_categoryID") != null && localStorage.getItem("g_subC
 	}
 } else if (localStorage.getItem("g_page") === homeID) {
     displayHome();
+} else if (localStorage.getItem("g_page") === c_tasksID) {
+    $("a.home-btn").removeClass("w--current");
+    $("a.ctasks-btn").addClass("w--current");
+	displayCTasks();
 } else if (localStorage.getItem("g_page") === error404ID) {
 	display404();
 }
