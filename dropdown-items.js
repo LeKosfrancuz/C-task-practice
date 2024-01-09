@@ -1,6 +1,6 @@
 const Tasks = [
-	new Task("Učitaj", null, null, ["Učitaj paran", "Učitaj neparan", "Učitaj palindrom"]),
-	new Task("Upiši", null, null, ["Upiši paran", "Upiši neparan", "Upiši palindrom"]),
+	new Task("Učitaj broj", null, null, ["Učitaj paran", "Učitaj neparan", "Učitaj palindrom"]),
+	new Task("Upiši broj", null, null, ["Upiši paran", "Upiši neparan", "Upiši palindrom"]),
 	new Task("Izračunaj", null, null, [
 		"Izračunaj zbroj",
 		"Izračunaj razliku",
@@ -69,7 +69,7 @@ const SeqGeometryTasks = [
 	),
 ];
 
-var izbor = [
+var izbornik = [
 	new Category("Sequential", [
 		new SubCategory("Numerical", SeqNumericalTasks),
 		new SubCategory("Geometry", SeqGeometryTasks),
@@ -81,4 +81,4 @@ var izbor = [
 	new Category("While loop", [new SubCategory("Characters", Tasks)]),
 ];
 
-setDropdown(izbor);
+setDropdown(izbornik);

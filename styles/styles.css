@@ -3779,16 +3779,6 @@ textarea.w-select {
 	right: 0;
 }
 
-.tabs-menu {
-	grid-column-gap: 2px;
-	background-color: var(--neutral--200);
-	border-radius: 72px;
-	align-items: center;
-	margin-bottom: 20px;
-	padding: 6px;
-	display: flex;
-}
-
 .tabs-menu.links-single {
 	grid-column-gap: 0px;
 	background-color: rgba(0, 0, 0, 0);

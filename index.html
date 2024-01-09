@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Fri Dec 22 2023 15:36:38 GMT+0000 (Coordinated Universal Time) -->
-<html
-	data-wf-domain="zn-zadatci-test.webflow.io"
-	data-wf-page="658599243401439b60931a32"
-	data-wf-site="658599243401439b609319c9"
-	data-wf-status="1"
-	lang="en"
->
+<html data-wf-page="homePage">
 	<head>
 		<meta charset="utf-8" />
 		<title>C programing practice</title>
@@ -19,20 +12,23 @@
 			content="Practice your C programing skils on 1000+ diferent tasks!"
 			property="og:description"
 		/>
-		<meta content="./resources/websoite-link-banner.jpg" property="og:image" />
+		<meta content="./resources/website-link-banner.jpg" property="og:image" />
 		<meta content="C programing practice" property="twitter:title" />
 		<meta
 			content="Practice your C programing skils on 1000+ diferent tasks!"
 			property="twitter:description"
 		/>
 		<meta
-			content="./resources/websoite-link-banner.jpg"
+			content="./resources/website-link-banner.jpg"
 			property="twitter:image"
 		/>
 		<meta property="og:type" content="website" />
 		<meta content="summary_large_image" name="twitter:card" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<meta content="Webflow" name="generator" />
+		<meta content="Mateo Kos" name="author" />
+		<meta content="Webflow" name="first-draft" />
+		<meta content="C Tasks, C practice" name="keywords" />
+		<meta name="color-scheme" content="light" />
 
 		<link rel="stylesheet" href="./styles/general-styles.css" type="text/css" />
 		<link href="./styles/styles.css" rel="stylesheet" type="text/css" />
@@ -83,20 +79,11 @@
 			>
 				<div class="container-default w-container">
 					<div class="header-content-wrapper">
-						<a
-							href="/"
-							aria-current="page"
-							class="logo-link-wrapper w-nav-brand w--current"
-							><img
-								src="./resources/website-banner-icon.svg"
-								loading="eager"
-								alt="Website - Logo"
-						/></a>
 						<nav role="navigation" class="header-nav-menu-wrapper w-nav-menu">
 							<ul role="list" class="header-nav-menu-list w-list-unstyled">
 								<li class="header-nav-list-item">
 									<a
-										href="/"
+										href="#home"
 										aria-current="page"
 										class="header-nav-link w-nav-link home-btn w--current"
 										>Home</a
@@ -110,113 +97,11 @@
 									>
 								</li>
 								<li class="header-nav-list-item">
-									<div
-										data-hover="true"
-										data-delay="0"
-										data-w-id="23df6058-9325-fe01-4f10-779a60659a0b"
-										class="position-relative---z-index-2 w-dropdown"
+									<a
+										href="./about.html"
+										class="header-nav-link about-btn w-nav-link"
+										>About</a
 									>
-										<div
-											class="header-nav-link dropdown-header-link w-dropdown-toggle"
-										>
-											<div>Pages</div>
-											<div class="line-rounded-icon header-dropdown-icon">
-												
-											</div>
-										</div>
-										<nav class="dropdown-list w-dropdown-list">
-											<div class="card header-dropdown-card">
-												<div>
-													<div class="text-100 dropdown-column-title">
-														Start here
-													</div>
-													<div class="grid-1-column gap-row-12px">
-														<a
-															href="/"
-															aria-current="page"
-															class="dropdown-link-single w-dropdown-link home-btn w--current"
-															>Home</a
-														><a
-															href="#c-tasks"
-															class="dropdown-link-single w-dropdown-link ctasks-btn"
-															>C Tasks</a
-														><a
-															href="/licenses"
-															class="dropdown-link-single w-dropdown-link"
-															>Licenses</a
-														>
-													</div>
-												</div>
-												<div>
-													<div class="text-100 dropdown-column-title">
-														Components
-													</div>
-													<div class="grid-2-columns">
-														<div
-															id="w-node-_2f03413c-e521-4ef9-2d76-f7241f11e1b9-059bc49f"
-															class="grid-1-column gap-row-12px"
-														>
-															<a
-																href="https://dashflowtemplate.webflow.io/components#buttons"
-																class="dropdown-link-single w-dropdown-link"
-																>Buttons</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#inputs"
-																class="dropdown-link-single w-dropdown-link"
-																>Inputs</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#avatars"
-																class="dropdown-link-single w-dropdown-link"
-																>Avatars</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#badges"
-																class="dropdown-link-single w-dropdown-link"
-																>Badges</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#tooltips"
-																class="dropdown-link-single w-dropdown-link"
-																>Tooltips</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#notifications"
-																class="dropdown-link-single w-dropdown-link"
-																>Notifications</a
-															>
-														</div>
-														<div
-															id="w-node-ca111117-7748-5a34-58ad-0be570d193fb-059bc49f"
-															class="grid-1-column gap-row-12px"
-														>
-															<a
-																href="https://dashflowtemplate.webflow.io/components#cards"
-																class="dropdown-link-single w-dropdown-link"
-																>Cards</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#tables"
-																class="dropdown-link-single w-dropdown-link"
-																>Tables</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#modals"
-																class="dropdown-link-single w-dropdown-link"
-																>Modals</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#tabs"
-																class="dropdown-link-single w-dropdown-link"
-																>Tabs</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#breadcrumbs"
-																class="dropdown-link-single w-dropdown-link"
-																>Bread crumbs</a
-															><a
-																href="https://dashflowtemplate.webflow.io/components#empty-states"
-																class="dropdown-link-single w-dropdown-link"
-																>Empty states</a
-															>
-														</div>
-													</div>
-												</div>
-											</div>
-										</nav>
-									</div>
 								</li>
 							</ul>
 
@@ -228,7 +113,7 @@
 									<div class="text-50 medium sidebar-title">Start here</div>
 									<div class="grid-1-column sidebar-links-grid mg-bottom-48px">
 										<a
-											href="/"
+											href="#home"
 											aria-current="page"
 											class="sidebar-link w-inline-block home-btn w--current"
 											><img
@@ -259,21 +144,15 @@
 							</div>
 							<div class="hidden-on-desktop show-on-tablet">
 								<div class="buttons-row gap-column-12px">
-									<a
-										data-w-id="dc3b625c-4a68-4ebe-9b74-d3193fa9f32f"
-										href="#"
-										class="btn-primary w-inline-block"
-										><div class="flex-horizontal gap-column-4px">
-											<div>Get template</div>
-										</div></a
-									><a
-										data-w-id="5228fae3-1046-92bf-afc3-a85185c5a451"
-										href="#"
-										class="btn-secondary w-inline-block"
-										><div class="flex-horizontal gap-column-4px">
-											<div>Default</div>
-										</div></a
-									>
+									<a href="./about.html" class="sidebar-link w-inline-block">
+										<img
+											src="./resources/icons/info-icon.png"
+											alt="Info icon"
+											loading="eager"
+											class="max-w-20px"
+										/>
+										<div>About</div>
+									</a>
 								</div>
 							</div>
 						</nav>
@@ -297,7 +176,7 @@
 								<div class="text-50 medium sidebar-title">Start here</div>
 								<div class="grid-1-column sidebar-links-grid mg-bottom-48px">
 									<a
-										href="/"
+										href="#home"
 										aria-current="page"
 										class="sidebar-link w-inline-block home-btn w--current"
 										><img
@@ -321,39 +200,9 @@
 								</div>
 								<div class="text-50 medium sidebar-title">C tasks</div>
 								<!-- PC category dropdown -->
-								<div class="grid-1-column sidebar-links-grid category-dropdown">
-									<div
-										data-hover="false"
-										data-delay="20"
-										data-w-id="23df6058-9325-fe01-4f10-779a60659a0b"
-										class="position-relative---z-index-2 w-dropdown"
-									>
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<span class="text-block">For Loop</span>
-											<span class="line-rounded-icon header-dropdown-icon">
-												
-											</span>
-										</div>
-										<nav
-											class="dropdown-list w-dropdown-list dropdown-move-tasklist"
-										>
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
+								<div
+									class="grid-1-column sidebar-links-grid category-dropdown"
+								></div>
 							</div>
 						</div>
 
@@ -397,67 +246,13 @@
 								class="mg-top-80px"
 							>
 								<h2 class="text-500 bold mg-bottom-48px">
-									Explore the components
+									Learn more about this website
 								</h2>
-								<h2 class="text-200 bold mg-bottom-24px">Buttons</h2>
-								<div class="grid-3-columns home-cards-grid">
-									<a
-										id="w-node-e2265a5a-2c6e-7733-3840-009344af1409-60931a32"
-										data-w-id="e2265a5a-2c6e-7733-3840-009344af1409"
-										href="https://dashflowtemplate.webflow.io/components#primary-button"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b44_dashflow-x-primary-button-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Primary Button Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">
-												Primary button
-											</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													6 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									><a
-										id="w-node-fc6c7783-45d1-8738-009f-b7cab1e75463-60931a32"
-										data-w-id="fc6c7783-45d1-8738-009f-b7cab1e75463"
-										href="https://dashflowtemplate.webflow.io/components#secondary-button"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b45_dashflow-x-secondary-button-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Secondary Button Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">
-												Secondary button
-											</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													6 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									>
+								<h2 class="text-200 bold mg-bottom-24px">
+									Some Title
+								</h2>
+								<div>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, nibh sit amet vulputate mollis, velit lorem bibendum tellus, id bibendum magna nulla sed odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut mattis magna et risus consequat dignissim. Nam mauris augue, venenatis at varius a, aliquam sit amet magna. Suspendisse id lorem non magna posuere efficitur vitae sed augue. Praesent a leo nec diam ornare gravida eget sed sem. Nunc eu vehicula est. Morbi molestie sem vitae mollis efficitur. Morbi sit amet nisl eu enim rhoncus pharetra in in urna. Nam leo nulla, rhoncus id urna euismod, euismod convallis libero. Nulla facilisi. Sed sit amet rhoncus nunc. Duis ligula sapien, accumsan vel molestie ut, vehicula nec turpis. Aenean at pulvinar sapien. Donec eros quam, efficitur quis ornare quis, auctor nec risus. Aenean at mauris nisl.
 								</div>
 							</div>
 							<div
@@ -465,214 +260,6 @@
 								style="opacity: 0"
 								class="divider home-sections-divider"
 							></div>
-							<div
-								data-w-id="59f57d2e-1fb7-8e6a-345a-8e16bf36f6c4"
-								style="opacity: 0"
-							>
-								<h2 class="text-200 bold mg-bottom-24px">Inputs</h2>
-								<div class="grid-3-columns home-cards-grid">
-									<a
-										id="w-node-_59f57d2e-1fb7-8e6a-345a-8e16bf36f6ca-60931a32"
-										data-w-id="59f57d2e-1fb7-8e6a-345a-8e16bf36f6ca"
-										href="https://dashflowtemplate.webflow.io/components#text-input"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b46_dashflow-x-text-input-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Text Input Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">Text input</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													3 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									><a
-										id="w-node-_59f57d2e-1fb7-8e6a-345a-8e16bf36f6d5-60931a32"
-										data-w-id="59f57d2e-1fb7-8e6a-345a-8e16bf36f6d5"
-										href="https://dashflowtemplate.webflow.io/components#textarea-input"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b0d_dashflow-x-text-area-input-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Text Area Input Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">
-												Textarea input
-											</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													2 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									><a
-										id="w-node-_3684a39b-c258-a036-5fbd-863d6f80ae8f-60931a32"
-										data-w-id="3684a39b-c258-a036-5fbd-863d6f80ae8f"
-										href="https://dashflowtemplate.webflow.io/components#checkbox-button"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b00_dashflow-x-checkbox-button-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Checkbox Button Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">
-												Checkbox button
-											</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													2 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									><a
-										id="w-node-b456f04f-505c-8255-368f-77856cc6dcff-60931a32"
-										data-w-id="b456f04f-505c-8255-368f-77856cc6dcff"
-										href="https://dashflowtemplate.webflow.io/components#toggle-button"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b01_dashflow-x-toggle-button-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Toggle Button Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">
-												Toggle button
-											</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													2 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									><a
-										id="w-node-df2f46e0-d573-6f21-8a24-0369ccb51c6b-60931a32"
-										data-w-id="df2f46e0-d573-6f21-8a24-0369ccb51c6b"
-										href="https://dashflowtemplate.webflow.io/components#dropdowns"
-										class="card text-decoration-none overflow-hidden w-inline-block"
-										><div class="link-image-wrapper">
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b41_dashflow-x-dropdowns-component-dashboard-webflow-template.png"
-												loading="eager"
-												alt="Dashflow X - Dropdowns Component - Dashboard Webflow Template"
-												class="link-image"
-											/>
-										</div>
-										<div class="pd-24px">
-											<h3 class="text-200 medium mg-bottom-4px">Dropdowns</h3>
-											<div class="_2-items-wrap-container">
-												<div class="text-200 medium color-neutral-600">
-													3 components
-												</div>
-												<div
-													class="line-rounded-icon icon-size-14px color-accent-1"
-												>
-													
-												</div>
-											</div>
-										</div></a
-									>
-								</div>
-							</div>
-							<div
-								data-w-id="e64dd9bf-8a12-a9f7-8f81-5ac45d33b785"
-								style="opacity: 0"
-								class="divider home-sections-divider"
-							></div>
-							<div
-								data-w-id="af131125-76d4-554e-601b-e494ec3dfdc5"
-								style="opacity: 0"
-								class="w-layout-grid grid-2-columns-2 _1-col-tablet"
-							>
-								<a
-									id="w-node-af131125-76d4-554e-601b-e494ec3dfdc6-60931a32"
-									href="#"
-									class="cta-card buy-card w-inline-block"
-									><div class="card-home-pages-wrapper">
-										<div>
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b71_webflow-logo-webfow-templates-brix-templates.svg"
-												alt="Webflow - Logo"
-												class="cta-square-logo"
-											/>
-											<h3 class="color-neutral-100">Get now on Webflow</h3>
-											<p>
-												Get the Dashflow X Webflow Template today, and take your
-												product design to the next level.
-											</p>
-											<div class="btn-secondary">
-												<div class="flex-horizontal gap-column-4px">
-													<div>Get template</div>
-													<img
-														src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b5f_secondary-button-icon-right-dashflow-webflow-template.svg"
-														loading="eager"
-														alt=""
-														class="link-icon arrow-right"
-													/>
-												</div>
-											</div>
-										</div></div></a
-								><a
-									id="w-node-_64c2edb4-4f21-1111-9680-63f8cf2d0141-60931a32"
-									href="https://brixtemplates.com/more-webflow-templates"
-									class="cta-card buy-card dark w-inline-block"
-									><div class="card-home-pages-wrapper">
-										<div>
-											<img
-												src="https://assets-global.website-files.com/658599243401439b609319c9/658599243401439b60931b72_brix-templates-logo-webfow-templates-brix-templates.svg"
-												alt="BRIX Templates - Logo"
-												class="cta-square-logo"
-											/>
-											<h3>Browse more templates</h3>
-											<p>
-												Looking for more templates? Browse our collection of
-												100+ Webflow Templates on BRIXTemplates.com
-											</p>
-											<div class="btn-primary">
-												<div class="flex-horizontal gap-column-4px">
-													<div>Browse more templates</div>
-												</div>
-											</div>
-										</div>
-									</div></a
-								>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -689,13 +276,6 @@
 										target="_blank"
 										class="text-bold"
 										>Zlatko Nadarević</a
-									>
-									| Designed by
-									<a
-										href="https://about:blank/"
-										target="_blank"
-										class="text-bold"
-										>Mateo Kos</a
 									>
 								</div>
 								<div
@@ -723,8 +303,8 @@
 		<script src="./wf-deps/interactions-init.js"></script>
 
 		<script src="./dropdown-template.js"></script>
+		<script src="./task-template.js"></script>
 		<script src="./dropdown-items.js"></script>
-		<script src="./dropdown-refresh.js"></script>
+		<script src="./page-redraw.js"></script>
 	</body>
 </html>
-

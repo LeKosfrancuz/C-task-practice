@@ -238,3 +238,26 @@ figcaption {
 	box-shadow: 0 0 3px 0 var(--general--shadow-01);
 	color: var(--neutral--100);
 }
+
+.tabs-menu {
+	grid-column-gap: 6px;
+	/* background-color: var(--system--blue-100); */
+	border-radius: 72px;
+	/* align-items: center; */
+	/* margin-bottom: 20px; */
+	padding: 6px;
+}
+
+.ctasks-category-link {
+	color: var(--neutral--600);
+	align-items: center;
+	padding: 8px;
+	text-decoration: none;
+	transition: box-shadow 0.3s, border-color 0.3s, background-color 0.3s,
+		color 0.3s;
+	flex-direction: row;
+}
+
+.ctasks-category-link:hover {
+	text-decoration: none;
+}
