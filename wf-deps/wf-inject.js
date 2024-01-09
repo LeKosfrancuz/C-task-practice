@@ -16479,7 +16479,7 @@
 	require_webflow_dropdown();
 	// require_webflow_forms();
 	require_webflow_navbar();
-	// require_webflow_tabs();
+	require_webflow_tabs();
 })();
 /*!
  * tram.js v0.8.2-global

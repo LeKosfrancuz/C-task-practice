@@ -121,16 +121,54 @@ function addTask(task, taskID) {
                     `;
 				
 	if (task._TestInputs !== null && task._TestOutputs !== null) {
-		console.log(task._TestOutputs);
-		taskHTML += `
-								<div class="input mg-bottom-16px">
-									<strong>INPUT :</strong>
-										<blockquote>${task._TestInputs[0]}</blockquote>
-									<strong>OUTPUT :</strong>
-										<blockquote>${task._TestOutputs[0]}</blockquote>
-								</div>
-		
-		`
+		if (task._TestInputs.length === 1 && task._TestOutputs.length === task._TestInputs.length) {
+			taskHTML += `
+									<div class="input mg-bottom-16px">
+										<strong>INPUT :</strong>
+											<blockquote>${task._TestInputs[0]}</blockquote>
+										<strong>OUTPUT :</strong>
+											<blockquote>${task._TestOutputs[0]}</blockquote>
+									</div>
+			
+			`
+		} else if (task._TestInputs.length === task._TestOutputs.length && task._TestInputs.length > 1) {
+			taskHTML += `
+			<div class="inner-container">
+				<div data-easing="ease" data-duration-in="300" data-duration-out="100" class="flex-vertical align-start w-tabs">
+					<div class="tabs-menu w-tab-menu">
+			`;
+
+			task._TestInputs.forEach((_, i) => {
+				taskHTML += `
+							<a data-w-tab="Tab ${i}" class="tab-menu-badge-link w-tab-link w--current">
+								<div>Example ${i + 1}</div>
+							</a>
+				`;
+			});
+
+			taskHTML += `
+					</div>
+					
+					<div class="overflow-visible w-tab-content">
+					`;
+
+			task._TestInputs.forEach((_, i) => {
+				taskHTML += `
+							<div data-w-tab="Tab ${i}" class="w-tab-pane" >
+									<div class="input mg-bottom-16px">
+										<strong>INPUT :</strong>
+											<blockquote>${task._TestInputs[i]}</blockquote>
+										<strong>OUTPUT :</strong>
+											<blockquote>${task._TestOutputs[i]}</blockquote>
+									</div>
+							</div>
+				`;
+			});
+			  
+			taskHTML += `
+					</div>
+			`;
+		}
 	}
     
     if (task._Similar != null) {
@@ -146,7 +184,7 @@ function addTask(task, taskID) {
                                                     <div class="flex-horizontal gap-column-4px">
                                                         <div style="color:white" >Find similar</div>
                                                         <img
-                                                            src="./resources/icons/right-arrow.svg"
+                                                            src="./resources/icons/button-right-arrow.svg"
                                                             loading="eager"
                                                             alt=""
                                                             class="link-icon arrow-right"/>
@@ -193,7 +231,7 @@ function displayHome() {
 }
 
 function displayCTasks() {
-    $("div.tasks-container").html("<h1>C Tasks</h1> Ova stranica nije završena!");
+    $("div.tasks-container").html("<h1>C Tasks</h1> Ova stranica nije završena! <br> Odabir zadatka omogućen je kroz padajuće izbornike.");
     Webflow.require("ix2").init(rawData);
 }
 

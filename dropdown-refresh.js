@@ -63,7 +63,7 @@ if (localStorage.getItem("g_categoryID") != null && localStorage.getItem("g_subC
 	display404();
 }
 
-izbornik.forEach((izbor) => {
+g_izbornik.forEach((izbor) => {
 	izbor.print();
 });
     
