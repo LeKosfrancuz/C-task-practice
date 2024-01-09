@@ -21,7 +21,7 @@ function selectPage(izbornik) {
 		localStorage.setItem("g_page", homeID);
 		if (window.location.hash !== "") {
 			// clear # from url after #home
-			window.location.href = window.location.origin; 
+			window.location.href = window.location.origin + window.location.pathname; 
 		}
 	} else if (window.location.hash === "#" + c_tasksID) {
 		localStorage.setItem("g_page", c_tasksID);
