@@ -125,7 +125,6 @@
 }
 
 .dropdown-move-tasklist.w--open {
-	display: flex;
 	width: auto;
 	max-height: 30rem;
 	flex-flow: column;
@@ -134,6 +133,13 @@
 	position: relative;
 	overflow: auto;
 	background-color: var(--system--blue-150);
+}
+
+.dropdown-open-override.w--open {
+	/* TODO: pogledati postoji li bolji način za prikazivanje dropdown-a kao otvorenog */
+	display: block !important;
+	opacity: 1 !important;
+	transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) !important;
 }
 
 .dropdown-move-simlist.w--open {
@@ -168,6 +174,7 @@
 	color: #222;
 	padding: 10px 20px;
 	display: block;
+	cursor: pointer;
 }
 
 .w-dropdown-link.w--current {

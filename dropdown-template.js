@@ -6,18 +6,18 @@ function addDropdown(categoryName, categoryID, subCategories) {
                                             data-w-id="23df6058-9325-fe01-4f10-779a60659a0b"
                                             class="w-dropdown"
                                         > 
-                                            <div class="dropdown-toggle w-dropdown-toggle"> 
+                                            <div class="dropdown-toggle w-dropdown-toggle dropdown-${categoryID}"> 
                                                 <div class="text-block" style="display: inline-block;">${categoryName}</div> 
                                                 <div class="line-rounded-icon header-dropdown-icon" style="display: inline-block;">
                                                     
                                                 </div>
                                             </div> 
     `;
-	newDropdown += `<nav class="dropdown-list w-dropdown-list dropdown-move-tasklist rounded-rect-6">`;
+	newDropdown += `<nav class="dropdown-list w-dropdown-list dropdown-move-tasklist rounded-rect-6 dropdown-${categoryID}">`;
 
 	// data-w-id="f18a1fce-0ff6-7565-5f48-1e0735f5d8ed"
 	for (let i = 0; i < subCategories.length; i++) {
-		newDropdown += `<a onclick="selectCategory(${categoryID}, ${i})" class="w-dropdown-link">${subCategories[i]._name}</a>`;
+		newDropdown += `<a onclick="selectCategory(${categoryID}, ${i})" class="w-dropdown-link dropdown-${categoryID}-${i}">${subCategories[i]._name}</a>`;
 	};
 
 	newDropdown += `                                            

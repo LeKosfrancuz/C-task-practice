@@ -124,10 +124,14 @@ $home = $("div.tasks-container").clone();
 
 function displayHome() {
     $("div.tasks-container").html($home);
+	$("div.sidebar-container").addClass("sidebar-hidden");
+	$("div.main-dashboard-grid").removeClass("grid-2-columns");
     Webflow.require("ix2").init(rawData);
 }
 
 function displayCTasks() {
+	$("div.sidebar-title").html("C Tasks - By Difficulty");
+
     $("div.tasks-container").html("<h1>C Tasks</h1> Ova stranica nije završena! <br> Odabir zadatka omogućen je kroz padajuće izbornike ili klikom na kategoriju.");
     let ctasksHTML = "";
     g_izbornik.forEach((category, i) => {
@@ -188,6 +192,12 @@ function display404() {
 }
 
 function displayCategory(izbornik, categoryID, subCategoryID) {
+	$(`div.dropdown-${categoryID}`).addClass("w--open")
+	$(`nav.dropdown-${categoryID}`).addClass("w--open");
+	$(`nav.dropdown-${categoryID}`).addClass("dropdown-open-override");
+	$(`a.dropdown-${categoryID}-${subCategoryID}`).addClass("w--current");
+
+
 	// TODO: Spojiti linkove s njihovim odgovarajućim stranicama
 	$("div.tasks-container").html(`
 		<div class="breadcrumb-wrapper mg-bottom-24px">
