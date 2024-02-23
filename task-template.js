@@ -193,9 +193,20 @@ function display404() {
 
 function displayCategory(izbornik, categoryID, subCategoryID) {
 	$(`div.dropdown-${categoryID}`).addClass("w--open")
+	$(`div.dropdown-${categoryID}`).html(`
+                                                <div class="text-block" style="display: inline-block;">${izbornik[categoryID]._CategoryName}</div> 
+                                                        <img
+                                                            src="./resources/icons/button-right-arrow-black.svg"
+                                                            loading="eager"
+                                                            alt=""
+                                                            class="link-icon arrow-right"/>
+
+												`);
 	$(`nav.dropdown-${categoryID}`).addClass("w--open");
 	$(`nav.dropdown-${categoryID}`).addClass("dropdown-open-override");
 	$(`a.dropdown-${categoryID}-${subCategoryID}`).addClass("w--current");
+
+	$("div.sidebar-title").html(`C Tasks - ${izbornik[categoryID]._CategoryName}`);
 
 
 	$("div.tasks-container").html("");

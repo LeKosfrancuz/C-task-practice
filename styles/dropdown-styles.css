@@ -124,12 +124,14 @@
 	background-color: transparent;
 }
 
+.dropdown-move-tasklist {
+	text-align: right;
+}
 .dropdown-move-tasklist.w--open {
 	width: auto;
 	max-height: 30rem;
-	flex-flow: column;
-	justify-content: space-between;
-	align-items: stretch;
+	display: block;
+	text-align: right;
 	position: relative;
 	overflow: auto;
 	background-color: var(--system--blue-150);
@@ -191,11 +193,11 @@
 	}
 }
 
-.w-nav[data-collapse="all"] .w-nav-button,
+/* .w-nav[data-collapse="all"] .w-nav-button,
 .w--nav-dropdown-open,
 .w--nav-dropdown-toggle-open {
 	display: block;
-}
+} */
 
 .w--nav-dropdown-list-open {
 	position: static;
@@ -210,3 +212,4 @@
 	display: flex;
 	gap: 6px;
 }
+
