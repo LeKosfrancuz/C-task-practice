@@ -198,28 +198,7 @@ function displayCategory(izbornik, categoryID, subCategoryID) {
 	$(`a.dropdown-${categoryID}-${subCategoryID}`).addClass("w--current");
 
 
-	// TODO: Spojiti linkove s njihovim odgovarajućim stranicama
-	$("div.tasks-container").html(`
-		<div class="breadcrumb-wrapper mg-bottom-24px">
-			<div class="flex align-center">
-				<a data-w-id="520db6ac-b746-24e0-5769-1b51fae2710b" href="#c-tasks" class="breadcrumb-link-wrapper w-inline-block">
-					<div class="text-600">C Tasks</div>
-					<div class="breadcrumb-underline" style="background-color: rgb(31, 45, 84);"></div>
-				</a>
-				<img src="./resources/icons/breadcrumb-divider-icon.svg" loading="eager" alt=">" class="breadcrumb-divider">
-			</div>
-			
-			<div class="flex align-center">
-				<a data-w-id="520db6ac-b746-24e0-5769-1b51fae2710b" href="#notconnected" class="breadcrumb-link-wrapper w-inline-block">
-					<div class="text-600">${izbornik[categoryID]._CategoryName}</div>
-					<div class="breadcrumb-underline" style="background-color: rgb(31, 45, 84);"></div>
-				</a>
-				<img src="./resources/icons/breadcrumb-divider-icon.svg" loading="eager" alt=">" class="breadcrumb-divider">
-			</div>
-			
-			<div class="text-600 breadcrumb-current">${izbornik[categoryID]._SubCategories[subCategoryID]._name}</div>
-		</div>
-	`);
+	$("div.tasks-container").html("");
 	let tasks = izbornik[categoryID]._SubCategories[subCategoryID]._TaskList;
 
 	tasks.forEach((task, i) => addTask(task, i));
