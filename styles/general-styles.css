@@ -284,3 +284,18 @@ figcaption {
 	justify-content: space-between;
 	display: flex;
 }
+
+.text-task {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.167em;
+}
+
+.text-task.bold {
+	font-weight: 700;
+}
+
+a.no-underline:link {
+	text-decoration: none;
+}
+

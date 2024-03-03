@@ -1,5 +1,80 @@
-function addTask(task, taskID) {
+let c_taskViewID = "c-prevtask";
+let c_taskViewSuf = ":task";
+
+function addTask(catID, subCatID, task, taskID) {
 	let taskHTML = `
+        					<div
+								data-w-id="a2155654-6d7f-027d-a70b-e30d05955b75"
+								style="opacity: 0"
+								class="grid-2-column header-dropdown-card"
+							>
+								<div class="inner-container mg-left-24px">
+									
+									
+									<h1 class="text-task mg-bottom-24px">
+										<span class="text-task bold">${taskID + 1}.</span>
+										<a href="#${c_taskViewID}-c${catID}-s${subCatID}-t${taskID}${c_taskViewSuf}" class="no-underline">${task._name}</a>
+									</h1>
+                    `;
+				
+    /*
+    if (task._Similar != null) {
+        taskHTML += `
+                                        <div
+                                            data-hover="false"
+                                            data-delay="20"
+                                            data-w-id="dc3b625c-4a68-4ebe-9b74-d3193fa9f32f"
+                                            href="#"
+                                            class="w-dropdown"
+                                            >
+                                                <a class="btn-primary w-inline-block w-dropdown-toggle pad-similar-btn"> 
+                                                    <div class="flex-horizontal gap-column-4px">
+                                                        <div style="color:white" >Find similar</div>
+                                                        <img
+                                                            src="./resources/icons/button-right-arrow.svg"
+                                                            loading="eager"
+                                                            alt=""
+                                                            class="link-icon arrow-right"/>
+                                                    </div>
+                                                </a> 
+                                            <nav class="w-dropdown-list dropdown-move-simlist rounded-rect-16">
+                            `;
+
+        task._Similar.forEach(similar => {
+            taskHTML += `<span class="dropdown-similars">${similar}</span>`;
+        });
+
+        taskHTML += `
+                                            </nav>
+                                        </div>
+                    `;
+    }*/
+
+	taskHTML += `
+								</div>
+							</div>
+
+							
+                `;
+
+	$("div.tasks-container").append(taskHTML);
+}
+
+let error404ID = "404"
+let homeID = "home";
+let c_tasksID = "c-tasks";
+let c_tasksSuf = ":tasklist";
+let useHash = true;
+
+function displayCTask(categoryID, subCategoryID, taskID) {
+    if (categoryID === "" || subCategoryID === "" || taskID === "") {
+        location.hash = "#404";
+        return;
+    }
+    let task = g_izbornik[categoryID]._SubCategories[subCategoryID]._TaskList[taskID];
+    
+    $("div.tasks-container").html("");
+    let taskHTML = `
         					<div
 								data-w-id="a2155654-6d7f-027d-a70b-e30d05955b75"
 								style="opacity: 0"
@@ -7,7 +82,7 @@ function addTask(task, taskID) {
 							>
 								<div class="inner-container mg-left-24px">
 									<div class="component-card-badge-top-wrapper" >
-										<span class="component-card-badge-top text-500">Task ${taskID + 1}</span>
+										<span class="component-card-badge-top text-500">Task ${parseInt(taskID) + 1}</span>
 									</div>
 
 									<h1 class="text-500 bold mg-bottom-24px">
@@ -79,7 +154,7 @@ function addTask(task, taskID) {
                                             >
                                                 <a class="btn-primary w-inline-block w-dropdown-toggle pad-similar-btn"> 
                                                     <div class="flex-horizontal gap-column-4px">
-                                                        <div style="color:white" >Find similar</div>
+                                                        <div style="color:white" >View Solution</div>
                                                         <img
                                                             src="./resources/icons/button-right-arrow.svg"
                                                             loading="eager"
@@ -90,9 +165,10 @@ function addTask(task, taskID) {
                                             <nav class="w-dropdown-list dropdown-move-simlist rounded-rect-16">
                             `;
 
-        task._Similar.forEach(similar => {
-            taskHTML += `<span class="dropdown-similars">${similar}</span>`;
-        });
+        //task._Similar.forEach(similar => {
+            //taskHTML += `<span class="dropdown-similars">${similar}</span>`;
+            taskHTML += `<span class="dropdown-similars">int main(void) { return 0; }</span>`;
+        //});
 
         taskHTML += `
                                             </nav>
@@ -114,17 +190,11 @@ function addTask(task, taskID) {
 	$("div.tasks-container").append(taskHTML);
 }
 
-let error404ID = "404"
-let homeID = "home";
-let c_tasksID = "c-tasks";
-let c_tasksSuf = ":task";
-let useHash = true;
-
 $home = $("div.tasks-container").clone();
 
 function displayHome() {
     $("div.tasks-container").html($home);
-	$("div.sidebar-container").addClass("sidebar-hidden");
+	$("div.izbornik.hidden-on-tablet").addClass("sidebar-hidden");
 	$("div.main-dashboard-grid").removeClass("grid-2-columns");
     Webflow.require("ix2").init(rawData);
 }
@@ -140,7 +210,7 @@ function displayCTasks() {
         `;
         category._SubCategories.forEach((subCategory, j) => {
             ctasksHTML += `
-                <a href="#${c_tasksID}-c${i}-s${j}:task" class="ctasks-category-link"> 
+                <a href="#${c_tasksID}-c${i}-s${j}${c_tasksSuf}" class="ctasks-category-link"> 
                 <div class="card container-default mg-bottom-24px" style="padding-bottom: 8px">
                     <h4> ${subCategory._name} </h4>
             `;
@@ -212,7 +282,7 @@ function displayCategory(izbornik, categoryID, subCategoryID) {
 	$("div.tasks-container").html("");
 	let tasks = izbornik[categoryID]._SubCategories[subCategoryID]._TaskList;
 
-	tasks.forEach((task, i) => addTask(task, i));
+	tasks.forEach((task, i) => addTask(categoryID, subCategoryID, task, i));
 }
 
 

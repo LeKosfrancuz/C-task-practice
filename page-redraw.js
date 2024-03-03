@@ -27,7 +27,7 @@ function selectPage(izbornik) {
 		localStorage.setItem("g_page", c_tasksID);
 	} else if (window.location.hash.startsWith(`#${c_tasksID}`)) {
 		localStorage.setItem("g_page", c_tasksID);
-
+		
 		let delim1 = window.location.hash.indexOf('-c');
 		let delim2 = window.location.hash.indexOf('-s');
 		let delim3 = window.location.hash.indexOf(c_tasksSuf);
@@ -39,6 +39,32 @@ function selectPage(izbornik) {
 			&& categoryID < izbornik.length && subCategoryID < izbornik[categoryID]._SubCategories.length) {
 				localStorage.setItem("g_categoryID", categoryID);
 				localStorage.setItem("g_subCategoryID", subCategoryID);
+			} else {
+				localStorage.setItem("g_page", error404ID);
+			}
+		} else {
+			localStorage.setItem("g_page", error404ID);
+		}
+	} else if (window.location.hash.startsWith(`#${c_taskViewID}`)) {
+		localStorage.setItem("g_page", c_taskViewID);
+
+		let dCat = window.location.hash.indexOf('-c');
+		let dSubCat = window.location.hash.indexOf('-s');
+		let dTask = window.location.hash.indexOf('-t');
+		let dEnd = window.location.hash.indexOf(c_taskViewSuf);
+
+		if (dCat !== -1 && dSubCat !== -1 && dTask !== -1 && dEnd !== -1 
+			&& dCat !== dSubCat && dSubCat !== dTask && dTask !== dEnd) {
+			let categoryID = parseInt(window.location.hash.substring(dCat+2, dSubCat));
+			let subCategoryID = parseInt(window.location.hash.substring(dSubCat+2, dTask));
+			let taskID = parseInt(window.location.hash.substring(dTask+2, dEnd));
+
+			if (Number.isInteger(categoryID) && Number.isInteger(subCategoryID) && Number.isInteger(taskID)
+			&& categoryID < izbornik.length && subCategoryID < izbornik[categoryID]._SubCategories.length
+			&& taskID < izbornik[categoryID]._SubCategories[subCategoryID]._TaskList.length) {
+				localStorage.setItem("g_categoryID", categoryID);
+				localStorage.setItem("g_subCategoryID", subCategoryID);
+				localStorage.setItem("g_taskID", taskID);
 			} else {
 				localStorage.setItem("g_page", error404ID);
 			}
@@ -57,8 +83,10 @@ function displayPage(izbornik) {
 		$("a.ctasks-btn").addClass("w--current");
 		displayCategory(izbornik, localStorage.getItem("g_categoryID"), localStorage.getItem("g_subCategoryID"));
 		if (useHash) {
-			window.location.hash = "#" + c_tasksID + "-c" + localStorage.getItem("g_categoryID") + "-s" + localStorage.getItem("g_subCategoryID") + ":task";
+			window.location.hash = "#" + c_tasksID + "-c" + localStorage.getItem("g_categoryID") + "-s" + localStorage.getItem("g_subCategoryID") + c_tasksSuf;
 		}
+	} else if (localStorage.getItem("g_page") === c_taskViewID) {
+		displayCTask(localStorage.getItem("g_categoryID"), localStorage.getItem("g_subCategoryID"), localStorage.getItem("g_taskID"));
 	} else if (localStorage.getItem("g_page") === homeID) {
 		displayHome();
 	} else if (localStorage.getItem("g_page") === c_tasksID) {
@@ -80,7 +108,8 @@ displayPage(g_izbornik);
 
 Webflow.require("ix2").init(rawData);
 
-
+/*
 localStorage.removeItem("g_categoryID");
 localStorage.removeItem("g_subCategoryID");
-localStorage.removeItem("g_page");
+localStorage.removeItem("g_taskID")
+localStorage.removeItem("g_page");*/
